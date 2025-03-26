@@ -1,0 +1,113 @@
+.hero{
+    position: relative;
+    background-color: #F5F7FA;
+    height: 683px;
+    .container{
+        height: 96%;
+    }
+    &__wrapper{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 104px;
+    }
+    &__context{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+        .large__text{
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 76px;
+            :first-child{
+                display: block;
+                color: $gray4d;
+            }
+            :last-child{
+                color: $green;
+            }
+        }
+        .small__text{
+            color: $light-gray;
+            margin-bottom: 16px;
+        }
+    }
+    &__btn{
+        padding: 14px 32px;
+        background-color: $green;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    &__image{
+        min-width: 391px;
+    }
+    &__dots{
+        text-align: center;
+    }
+}
+
+
+// MEDIA
+@media (max-width: 1135px) {
+    .hero{
+        &__wrapper{
+            gap: 70px;
+        }
+    }
+}
+@media (max-width: 1100px) {
+    .hero{
+       .large__text{
+        font-size: 54px;
+        line-height: 66px;
+       }
+    }
+}
+@media (max-width: 1010px) {
+    .hero{
+        &__image{
+            min-width: 331px;
+        }
+    }
+}
+@media (max-width: 830px) {
+    .hero{
+        &__image{
+            min-width: 301px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .hero{
+        min-height: 180vh;
+        &__wrapper{
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .hero{
+        min-height: 150vh;
+        &__wrapper{
+            gap: 50px;
+        }
+        &__context{
+            .large__text{
+                font-size: 52px;
+                line-height: 60px;
+            }
+            .small__text{
+                font-size: 14px;
+            }
+        }
+        &__btn{
+            padding: 12px 28px;
+            font-size: 14px;
+        }
+    }
+}

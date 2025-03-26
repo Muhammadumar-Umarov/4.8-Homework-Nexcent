@@ -1,30 +1,42 @@
-.header{
-    &__wrapper{
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: #F5F7FA;
+    &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 22px 0;
     }
-    &__nav{
-        &__navigations{
+
+    &__nav {
+        &__navigations {
             display: flex;
             align-items: center;
             gap: 50px;
-            li a{
-                color: #18191F ;
+            li a {
+                color: #18191F;
+                transition: .3s ease-in;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
-        }   
+        }
     }
-    &__actions{
+
+    &__actions {
         display: flex;
         align-items: center;
         gap: 34px;
-        a{
+
+        a {
             color: $green;
             font-size: 14px;
             font-weight: 500;
         }
-        button{
+
+        button {
             padding: 10px 20px;
             background-color: $green;
             border-radius: 6px;
@@ -33,43 +45,64 @@
     }
 }
 
+
+// MEDIA
 @media (max-width: 1100px) {
-    .header{
-        &__nav{
-            &__navigations{
+    .header {
+        &__nav {
+            &__navigations {
                 gap: 30px;
             }
         }
-        &__actions{
+
+        &__actions {
             gap: 24px;
         }
 
     }
 }
+
 @media (max-width: 850px) {
-    .header{
-        &__nav{
-            &__navigations{
+    .header {
+        &__nav {
+            &__navigations {
                 gap: 20px
             }
         }
     }
 }
+
 @media (max-width: 810px) {
-    .header{
-        &__nav{
-            &__navigations{
+    .header {
+        &__nav {
+            &__navigations {
                 display: none;
             }
         }
     }
 }
+
 @media (max-width: 480px) {
-    .header{
-        &__nav{
-            &__actions{
-                
+    .header {
+        &__wrapper{
+            padding: 18px 0;
+        }
+        &__actions {
+            gap: 16px;
+
+            a {
+                font-size: 12px;
             }
+
+            button {
+                padding: 8px 12px;
+                font-size: 12px;
+                border-radius: 4px
+            }
+        }
+
+        &__logo {
+            max-width: 120px;
         }
     }
 }

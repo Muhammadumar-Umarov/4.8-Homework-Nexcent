@@ -1,0 +1,120 @@
+.features {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        h3 {
+            max-width: 542px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            color: $gray4d;
+        }
+
+        span {
+            text-align: center;
+            line-height: 24px;
+            color: $light-gray;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 24px;
+        box-shadow: 0px 2px 4px rgba(171, 190, 209, 0.2);
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+
+            :first-child {
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 36px;
+                text-align: center;
+                color: $gray4d;
+
+                span {
+                    display: block;
+                    font-size: 28px;
+                    line-height: 36px;
+                    color: $gray4d;
+                }
+            }
+
+            :last-child {
+                font-size: 14px;
+                line-height: 20px;
+                color: $light-gray;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+
+// MEDIA
+@media (max-width: 1160px) {
+    .features {
+        &__content {
+            gap: 70px;
+        }
+    }
+}
+
+@media (max-width: 896px) {
+    .features {
+        &__content {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+    }
+}
+@media (max-width: 515px) {
+    .features{
+        &__header{
+            h3{
+                font-size: 32px;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .features {
+        &__card {
+            &__body {
+                :first-child {
+                    font-size: 24px;
+                    span{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

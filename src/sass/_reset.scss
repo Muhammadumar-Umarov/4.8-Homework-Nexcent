@@ -28,6 +28,14 @@ li{
 }
 button{
     border: none;
+    transition: .3s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        opacity: .8;
+    }
+    &:active{
+        background-color: #388E3B;
+    }
 }
 
 
